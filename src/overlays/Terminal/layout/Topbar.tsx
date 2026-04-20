@@ -151,7 +151,7 @@ export function Topbar({ onNavigate, onOpenPalette }: TopbarProps) {
         </a>
         <a
           className="icon-btn"
-          href="https://www.linkedin.com/in/baduru/"
+          href="https://www.linkedin.com/in/seungwan-kang-6548ab33b"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="LinkedIn"

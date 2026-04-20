@@ -916,9 +916,9 @@ function WhoamiBody() {
         <span
           className="v hl"
           style={linkStyle()}
-          onClick={() => window.open("https://linkedin.com/in/seungwan-kang", "_blank", "noopener,noreferrer")}
+          onClick={() => window.open("https://www.linkedin.com/in/seungwan-kang-6548ab33b", "_blank", "noopener,noreferrer")}
         >
-          <DecryptText text="linkedin.com/in/seungwan-kang" delay={1060} />
+          <DecryptText text="www.linkedin.com/in/seungwan-kang-6548ab33b" delay={1060} />
         </span>
       </div>
     </div>
@@ -1031,7 +1031,7 @@ function ContactBody() {
     { p: "$", t: "./contact.sh --verbose", c: "var(--ink)" },
     { p: ">", t: "mail · skangal@connect.ust.hk", c: "var(--acc)" },
     { p: ">", t: "github · github.com/baduru11", c: "var(--acc)", url: "https://github.com/baduru11" },
-    { p: ">", t: "linkedin · linkedin.com/in/seungwan-kang", c: "var(--acc)", url: "https://linkedin.com/in/seungwan-kang" },
+    { p: ">", t: "linkedin · www.linkedin.com/in/seungwan-kang-6548ab33b", c: "var(--acc)", url: "https://www.linkedin.com/in/seungwan-kang-6548ab33b" },
     { p: ">", t: "phone · +852 4717 8551", c: "var(--acc)" },
     { p: ">", t: "location · HKG", c: "var(--acc-3)" },
     { p: ">", t: "status · open to collab, hire, say hi", c: "var(--acc-2)" },

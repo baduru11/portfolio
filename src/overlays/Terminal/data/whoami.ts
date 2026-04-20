@@ -40,7 +40,7 @@ export const WHOAMI: WhoamiData = {
   contact: {
     email: "skangal@connect.ust.hk",
     github: "github.com/baduru11",
-    linkedin: "linkedin.com/in/seungwan-kang",
+    linkedin: "www.linkedin.com/in/seungwan-kang-6548ab33b",
     phone: "+852 4717 8551",
     location: "HKG",
     status: "open to collab, hire, say hi",
