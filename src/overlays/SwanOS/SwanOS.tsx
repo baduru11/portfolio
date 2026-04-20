@@ -906,7 +906,7 @@ function WhoamiBody() {
         <span
           className="v hl"
           style={linkStyle()}
-          onClick={() => window.open("https://github.com/baduru11", "_blank")}
+          onClick={() => window.open("https://github.com/baduru11", "_blank", "noopener,noreferrer")}
         >
           <DecryptText text="github.com/baduru11" delay={900} />
         </span>
@@ -916,7 +916,7 @@ function WhoamiBody() {
         <span
           className="v hl"
           style={linkStyle()}
-          onClick={() => window.open("https://linkedin.com/in/seungwan-kang", "_blank")}
+          onClick={() => window.open("https://linkedin.com/in/seungwan-kang", "_blank", "noopener,noreferrer")}
         >
           <DecryptText text="linkedin.com/in/seungwan-kang" delay={1060} />
         </span>
@@ -1043,7 +1043,7 @@ function ContactBody() {
         <div
           key={i}
           style={{ cursor: l.url ? "pointer" : "default" }}
-          onClick={() => l.url && window.open(l.url, "_blank")}
+          onClick={() => l.url && window.open(l.url, "_blank", "noopener,noreferrer")}
         >
           <span style={{ color: "var(--ink-dim)", marginRight: 8 }}>{l.p}</span>
           <span
