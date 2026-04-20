@@ -370,20 +370,26 @@ export default function Scene() {
           }}
           onCreated={(state) => {
             setCanvasMounted(true);
-            if (typeof window !== "undefined" && process.env.NODE_ENV !== "production") {
+            if (typeof window !== "undefined") {
+              // Required in all environments — tweenCameraToZone reads
+              // window.__r3fState.camera to sync FOV to each POV's authored
+              // Blender FOV. Without this, production kept the Canvas default
+              // FOV, making zoomed-in views (monitor/laptop/arcade) look
+              // closer than intended.
               (window as unknown as { __r3fState?: unknown }).__r3fState = state;
-              const { gl } = state;
-              // Diagnostic dump for the postfx black-frame bisect.
-              // eslint-disable-next-line no-console
-              console.log("[PostFX diag]", {
-                outputColorSpace: gl.outputColorSpace,
-                toneMapping: gl.toneMapping,
-                toneMappingExposure: gl.toneMappingExposure,
-                isWebGL2: gl.capabilities.isWebGL2,
-                precision: gl.capabilities.precision,
-                maxTextures: gl.capabilities.maxTextures,
-                maxSamples: gl.capabilities.maxSamples,
-              });
+              if (process.env.NODE_ENV !== "production") {
+                const { gl } = state;
+                // eslint-disable-next-line no-console
+                console.log("[PostFX diag]", {
+                  outputColorSpace: gl.outputColorSpace,
+                  toneMapping: gl.toneMapping,
+                  toneMappingExposure: gl.toneMappingExposure,
+                  isWebGL2: gl.capabilities.isWebGL2,
+                  precision: gl.capabilities.precision,
+                  maxTextures: gl.capabilities.maxTextures,
+                  maxSamples: gl.capabilities.maxSamples,
+                });
+              }
             }
           }}
         >
